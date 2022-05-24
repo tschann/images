@@ -1,146 +1,339 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Password Protected</title>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+     <meta name="robots" content="noindex,follow" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="noindex, nofollow">
+  <script text="javascript">
 
-        <style>
-            *,
-            *:after,
-            *:before {
-                box-sizing: border-box;
-            }
-            body,
-            html {
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-weight: 300;
-                font-size: 16px;
-                background: #f2f2f2;
-                color: #2D3737;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 100%;
-            }
+  </script>
 
-            .protected {
-                background: #fff;
-                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                border-radius: 3px;
-                min-width: 500px;
+</head>
+     
+ <body> 
+  
+ 
+<main class="gallery gallery__content--flow">
+        <figure>
+            <img src="images/croissant-moon.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Croissant Moon</h1>
+                <h2 class="title title--secondary">p. 3</h2>
+            </figcaption>
+        </figure>
 
-            }
-            .protected__content {
-                padding: 24px 28px;
-            }
-            .protected__content__heading {
-                font-size: 16px;
-                font-weight: 500;
-                margin: 0 0 12px;
-                line-height: 1;
-            }
-            .protected__alert {
-                display: none;
-                border-bottom: 1px solid transparent;
-                border-radius: 3px 3px 0 0;
-                padding: 12px 14px;
-                color: #a94442;
-                background-color: #f2dede;
-                border-color: #ebccd1;
-            }
-            .protected__content__input {
-                display: block;
-                border: solid 1px #ccc;
-                padding: 12px 14px;
-                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                font-size: 16px;
-                width: 100%;
-                border-radius: 3px;
+        <figure>
+            <img src="images/taco-plate.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Tacos</h1>
+                <h2 class="title title--secondary">p. 4</h2>
+            </figcaption>
+        </figure>
 
-                margin-bottom: 12px;
-            }
-            .protected__content__input:focus {
-                outline: none;
-                border-color: #228843;
-            }
-            .protected__content__btn {
-                background-color: #228843;
-                border-radius: 3px;
-                cursor: pointer;
-                border: none;
-                color: #fff;
-                padding: 12px 14px;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-weight: 500;
-                font-size: 16px;
+        <figure>
+            <img src="images/exploading-taco.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Exploading Tacos</h1>
+                <h2 class="title title--secondary">p. 4</h2>
+            </figcaption>
+        </figure>
 
-            }
-            .protected__content__btn:hover {
-                background-color: #1C6D36;
-            }
+        <figure>
+             <img src="images/romaine-leaves.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Romaine Leaves</h1>
+                <h2 class="title title--secondary">p. 5</h2>
+            </figcaption>
+        </figure>
 
-        </style>
+        <figure>
+             <img src="images/eggcup.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Egg in Eggcup</h1>
+                <h2 class="title title--secondary">p. 8</h2>
+            </figcaption>
+        </figure>
 
-    </head>
+        <figure>
+             <img src="images/broccolini.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Broccoli</h1>
+                <h2 class="title title--secondary">p. 9</h2>
+            </figcaption>
+        </figure>
 
-    <body>
+        <figure>
+              <img src="images/countertop.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Countertop with coffee pot, waffle iron</h1>
+                <h2 class="title title--secondary">p. 15</h2>
+            </figcaption>
+        </figure>
 
-        <div class="protected">
-            <div class="protected__alert" data-id="alert">You entered the wrong password</div>
-            <div class="protected__content">
-                <h1 class="protected__content__heading">You need a password to continue</h1>
-                <input class="protected__content__input" data-id="password" type="password" placeholder="password"/>
-                <button data-id="button" type="button" class="protected__content__btn">Continue</button>
-            </div>
-        </div>
 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
-        <script type="text/javascript">
-            "use strict"
-            var button = document.querySelectorAll('[data-id="button"]')
-            var password = document.querySelectorAll('[data-id="password"]')
+        <figure>
+              <img src="images/goat-dancing-coffee.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Goat dancing</h1>
+                <h2 class="title title--secondary">p. 17</h2>
+            </figcaption>
+        </figure>
 
-            function login(secret) {
-                var hash = sha1(secret)
-                var url = hash + "/index.html"
-                var alert = document.querySelectorAll('[data-id="alert"]')
+        <figure>
+              <img src="images/cereal.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Cereal</h1>
+                <h2 class="title title--secondary">p. 16</h2>
+            </figcaption>
+        </figure>
 
-                var request = new XMLHttpRequest()
-                request.open('GET', url, true)
+        <figure>
+              <img src="images/bananas.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Bananas</h1>
+                <h2 class="title title--secondary">p. 16 with cereal?</h2>
+            </figcaption>
+        </figure>
+        
+         <figure>
+              <img src="images/coffee-cup-hand.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Coffee</h1>
+                <h2 class="title title--secondary">p. 18</h2>
+            </figcaption>
+        </figure>
+      
+         <figure>
+              <img src="images/smelling.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Nose sniffing out coffee aroma</h1>
+                <h2 class="title title--secondary">p. 19</h2>
+            </figcaption>
+        </figure>
 
-                request.onload = function () {
-                    if (request.status >= 200 && request.status < 400) {
-                        window.location = url
-                    } else {
-                        parent.location.hash = hash
-                        alert[0].style.display = 'block'
-                        password[0].setAttribute('placeholder', 'Incorrect password')
-                        password[0].value = ''
-                    }
-                }
-                request.onerror = function () {
-                    parent.location.hash = hash
-                    alert[0].style.display = 'block'
-                    password[0].setAttribute('placeholder', 'Incorrect password')
-                    password[0].value = ''
-                }
-                request.send()
-            }
+         <figure>
+              <img src="images/teapot.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Tea pot</h1>
+                <h2 class="title title--secondary">p. 22</h2>
+            </figcaption>
+        </figure>
 
-            button[0].addEventListener("click", function () {
-                login(password[0].value)
-            })
+       <figure>
+              <img src="images/coffee-cup2.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">coffee cup</h1>
+                <h2 class="title title--secondary">p. 28</h2>
+            </figcaption>
+        </figure>
+  
+       <figure>
+              <img src="images/seersucker.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Seersucker</h1>
+                <h2 class="title title--secondary">p. 30</h2>
+            </figcaption>
+        </figure>
 
-            document.onkeydown = function (e) {
-                e = e || window.event
-                if (e.keyCode == 13) {
-                    login(password[0].value)
-                }
-            }
-        </script>
-    </body>
+         <figure>
+              <img src="images/toast.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Toast/bread and a knife</h1>
+                <h2 class="title title--secondary">p. 32</h2>
+            </figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/cookie-code.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Cookie / Code</h1>
+                <h2 class="title title--secondary">p.32</h2>
+            </figcaption>
+        </figure>
+
+       <figure>
+              <img src="images/accept-all-cookies.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Cookie / Code</h1>
+                <h2 class="title title--secondary">p. 32</h2>
+            </figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/ciabatta-slippers1.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Ciabatta Slippers</h1>
+                <h2 class="title title--secondary">p. 32</h2>
+            </figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/eggs.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Fried eggs</h1>
+                <h2 class="title title--secondary">p. 41</h2>
+            </figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/lunch-box-computer.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Lunchbox Computer</h1>
+                <h2 class="title title--secondary">p. 47</h2>
+            </figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/earl-of-sandwich.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Earl-of-sandwich</h1>
+                <h2 class="title title--secondary">p. 55</h2>
+            </figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/farting-saint-nick.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">farting St. Nick</h1>
+                <h2 class="title title--secondary">p. 57</h2>
+            </figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/brownie.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">brownie</h1>
+                <h2 class="title title--secondary">p. 58</h2>
+            </figcaption>
+        </figure>
+
+       <figure>
+              <img src="images/lap-up.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">“let’s drink,” from lamper—"to gulp down,” from laper, “to lap up.”</h1>
+                <h2 class="title title--secondary">p. 65</h2>
+            </figcaption>
+        </figure>
+   
+          <figure>
+              <img src="images/happy-hour.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Happy Hour</h1>
+                <h2 class="title title--secondary">p. 69</h2>
+            </figcaption>
+        </figure>
+   
+        <figure>
+              <img src="images/miner-martinez.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Gold miners heading to Martinez</h1>
+                <h2 class="title title--secondary">p. 76</h2>
+            </figcaption>
+        </figure>
+
+       <figure>
+              <img src="images/tapa.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Tapa</h1>
+                <h2 class="title title--secondary">p. 78</h2>
+            </figcaption>
+        </figure>
+
+       <figure>
+              <img src="images/manatee.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Manatee eating romaine</h1>
+                <h2 class="title title--secondary">p. 89</h2>
+            </figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/romaine-solider-bw.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Soldier's Salary</h1>
+                <h2 class="title title--secondary">p. 89</h2>
+            </figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/bell-pepper.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Green Pepper</h1>
+                <h2 class="title title--secondary">p. 89</h2>
+            </figcaption>
+        </figure>
+
+
+        <figure>
+              <img src="images/onion.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Onion</h1>
+                <h2 class="title title--secondary">p. 91</h2>
+            </figcaption>
+        </figure>
+
+
+        <figure>
+              <img src="images/radish.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Radish</h1>
+                <h2 class="title title--secondary">p. 93</h2>
+            </figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/mushroom.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Mushroom</h1>
+                <h2 class="title title--secondary">p. 94</h2>
+            </figcaption>
+        </figure>
+
+
+        <figure>
+              <img src="images/filet.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Waiter carrying Filet Mignon</h1>
+                <h2 class="title title--secondary">p. 98</h2>
+            </figcaption>
+        </figure>
+
+         <figure>
+              <img src="images/string-bean-banjo.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Zydeco, string bean banjo (strings need to be smaller)</h1>
+                <h2 class="title title--secondary">p. 105</h2>
+            </figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/clove-tree.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Cloves</h1>
+                <h2 class="title title--secondary">p. 107</h2>
+            </figcaption>
+        </figure>
+
+         <figure>
+              <img src="images/walnut.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Walnut with halo</h1>
+                <h2 class="title title--secondary">p. 106</h2>
+            </figcaption>
+        </figure>
+
+         <figure>
+              <img src="images/croque-en-bouche.png">
+            <figcaption class="header__caption" role="presentation">
+                <h1 class="title title--primary">Croque-en-bouche</h1>
+                <h2 class="title title--secondary">p. 116</h2>
+            </figcaption>
+        </figure>
+
+
+        
+    </main>
+
+</body>
 </html>
